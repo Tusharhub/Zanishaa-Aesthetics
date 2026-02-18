@@ -24,155 +24,104 @@
 
 <body data-bs-spy="scroll" data-bs-offset="120">
 
-    <a href="https://api.whatsapp.com/send?phone=919711555864" class="float " target="_blank">
-        <i class="fab fa-whatsapp my-float"></i>
+    <!-- ===== MOBILE FIXED CTA BAR ===== -->
+    <div class="mobile-cta-bar d-lg-none">
 
-    </a>
-    <a href="tel:9711555864" class="pulse">
-        <i class="fas fa-phone fa-flip fa-2x"></i>
+        <div class="container-fluid px-0">
+            <div class="row g-0 text-center">
 
-    </a>
+                <!-- Call -->
+                <div class="col-6 border-end">
+                    <a href="tel:9711555864"
+                        class="mobile-cta-link d-flex align-items-center justify-content-center py-3">
+                        <i class="fas fa-phone me-2"></i>
+                        <span>CALL NOW</span>
+                    </a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="col-6">
+                    <a href="https://wa.me/919711555864" target="_blank"
+                        class="mobile-cta-link whatsapp-link d-flex align-items-center justify-content-center py-3">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        <span>GET HELP</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     <style>
-        .payment_blink_icon {
-            animation: blinker 1s linear infinite;
-        }
+        /* ===== PREMIUM MOBILE CTA BAR ===== */
 
-        @keyframes blinker {
-            50% {
-                background: #000;
-            }
-        }
-
-        .payment-float {
+        .mobile-cta-bar {
             position: fixed;
-            width: 60px;
-            height: 60px;
-            top: 75%;
-            right: 22px;
-            /*background-color: #ffaa17;*/
-            background-color: #edc62b;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 9999999;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1050;
+            box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.10);
         }
 
-        .payment-float-icon {
-            margin-top: 16px;
-            font-size: 40px;
-            color: #fff;
+        /* Remove row margin */
+        .mobile-cta-bar .row {
+            margin: 0;
         }
 
-
-
-        .float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 9999;
+        /* Remove Bootstrap link behavior */
+        .mobile-cta-link,
+        .mobile-cta-link:hover,
+        .mobile-cta-link:focus,
+        .mobile-cta-link:active {
+            text-decoration: none !important;
+            color: #fff !important;
         }
 
-        .my-float {
-            margin-top: 16px;
+        /* Common Style */
+        .mobile-cta-link {
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.6px;
+            transition: all 0.3s ease;
         }
 
-
-
-        * {
-            padding: 0;
-            margin: 0
+        /* ===== CALL BUTTON - GOLD ===== */
+        .mobile-cta-bar .col-6:first-child .mobile-cta-link {
+            background: linear-gradient(135deg, #b89b5e, #d4af37);
         }
 
-        .content-center {
-            height: 100vh;
-            display: flex;
-            justify-content: flex-end;
-            /* Adjusted to align content at the right side */
-            align-items: flex-end;
-            /* Adjusted to align content at the bottom */
-            background-color: #eee;
-            padding: 20px;
-
-            background-color: #eee
+        .mobile-cta-bar .col-6:first-child .mobile-cta-link:hover {
+            background: linear-gradient(135deg, #a88945, #caa938);
+            transform: translateY(-2px);
         }
 
-        .pulse i {
-            color: #fff
+        /* ===== WHATSAPP BUTTON - GREEN ===== */
+        .whatsapp-link {
+            background: #25D366;
         }
 
-        .pulse {
-            height: 60px;
-            width: 60px;
-            background-color: orange;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            /* Changed to absolute positioning */
-            bottom: 20px;
-            /* Adjusted to position at the bottom */
-            left: 20px;
-            z-index: 100;
+        .whatsapp-link:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
         }
 
-        .pulse::before {
-            content: "";
-            position: absolute;
-            border: 1px solid orange;
-            width: calc(100% + 40px);
-            height: calc(100% + 40px);
-            border-radius: 50%;
-            animation: pulse 1s linear infinite
+        /* Icons */
+        .mobile-cta-link i {
+            font-size: 18px;
+            color: #fff !important;
         }
 
-        .pulse::after {
-            content: "";
-            position: absolute;
-            border: 1px solid ORANGE;
-            width: calc(100% + 40px);
-            height: calc(100% + 40px);
-            border-radius: 50%;
-            animation: pulse 1s linear infinite;
-            animation-delay: 0.3s
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(0.5);
-                opacity: 0
-            }
-
-            50% {
-                transform: scale(1);
-                opacity: 1
-            }
-
-            100% {
-                transform: scale(1.3);
-                opacity: 0
-            }
+        /* Prevent content hiding */
+        body {
+            padding-bottom: 70px;
         }
     </style>
 
 
 
 
-    <div class="switch-theme-mode">
-        <label id="switch" class="switch">
-            <input type="checkbox" onchange="toggleTheme()" id="slider">
-            <span class="slider round"></span>
-        </label>
-    </div>
+
 
 
     <div class="page-wrapper">
@@ -233,11 +182,11 @@
 
                         <!-- Right CTA -->
                         <div class="hero-top-right">
-                            <a href="tel:9711555864" class="hero-phone">
+                            <a href="tel:9711555864" class="hero-phone" style="color: #f3ece8;">
                                 📞 9711555864
                             </a>
 
-                            <a href="#enquiry-form" class="hero-top-cta">
+                            <a href="#enquiry-form" class="hero-top-cta" style="color: #f3ece8;">
                                 Book Free Consultation
                             </a>
                         </div>
@@ -267,77 +216,92 @@
                         </p>
 
                         <!-- BENEFITS -->
-                       <div class="hero-benefits">
+                        <div class="hero-benefits">
 
-    <div class="benefit-item">
-        <div class="benefit-icon">✓</div>
-        <div class="benefit-text">Suitable for All Skin Types</div>
-    </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <div class="benefit-text">Suitable for All Skin Types</div>
+                            </div>
 
-    <div class="benefit-item">
-        <div class="benefit-icon">✓</div>
-        <div class="benefit-text">Advanced Diode Laser Technology</div>
-    </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <div class="benefit-text">Advanced Diode Laser Technology</div>
+                            </div>
 
-    <div class="benefit-item">
-        <div class="benefit-icon">✓</div>
-        <div class="benefit-text">Minimal Discomfort & Downtime</div>
-    </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <div class="benefit-text">Minimal Discomfort & Downtime</div>
+                            </div>
 
-    <div class="benefit-item">
-        <div class="benefit-icon">✓</div>
-        <div class="benefit-text">Visible Hair Reduction from Early Sessions</div>
-    </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <div class="benefit-text">Visible Hair Reduction from Early Sessions</div>
+                            </div>
 
-</div>
-<style>
-    .hero-benefits {
-    margin-top: 25px;
-}
+                        </div>
+                        <style>
+                            .hero-benefits {
+                                margin-top: 30px;
+                            }
 
-.benefit-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 14px;
-}
+                            /* Each Benefit Row */
+                            .benefit-item {
+                                display: flex;
+                                align-items: center;
+                                gap: 16px;
+                                margin-bottom: 16px;
+                            }
 
-.benefit-icon {
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(135deg,#6f42c1,#8e5cf0);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 14px;
-    flex-shrink: 0;
-}
+                            /* GOLD ICON CIRCLE */
+                            .benefit-icon {
+                                width: 34px;
+                                height: 34px;
+                                background: linear-gradient(135deg, #b89b5e, #d4af37);
+                                color: #1f1410;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-weight: 700;
+                                font-size: 14px;
+                                flex-shrink: 0;
+                                box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+                                transition: 0.3s ease;
+                            }
 
-.benefit-text {
-    font-size: 16px;
-    font-weight: 500;
-    color: #2d1b4e;
-}
+                            /* Slight premium hover */
+                            .benefit-item:hover .benefit-icon {
+                                transform: scale(1.08);
+                            }
 
-/* Mobile */
-@media (max-width:768px) {
-    .benefit-text {
-        font-size: 14px;
-    }
+                            /* Text */
+                            .benefit-text {
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #f3ece8;
+                                /* Light beige for dark background */
+                                letter-spacing: 0.3px;
+                            }
 
-    .benefit-icon {
-        width: 26px;
-        height: 26px;
-        font-size: 12px;
-    }
-}
+                            /* ================= MOBILE ================= */
 
-</style>
+                            @media (max-width:768px) {
+
+                                .benefit-text {
+                                    font-size: 14px;
+                                }
+
+                                .benefit-icon {
+                                    width: 28px;
+                                    height: 28px;
+                                    font-size: 12px;
+                                }
+
+                            }
+                        </style>
+
                         <!-- STRONG CTA LINE -->
-                        <div class="hero-cta-line">
+                        <div class="hero-cta-line" style="color: #f3ece8;">
                             Book Your Free Consultation & Get a Personalized Treatment Plan
                         </div>
 
@@ -368,69 +332,61 @@
 
                     <!-- RIGHT SIDE FORM -->
                     <div class="col-lg-6">
-                       <div class="hero-form-card">
+                        <div class="hero-form-card">
 
-    <h5 class="form-title">Book Your Free Consultation</h5>
+                            <h5 class="form-title">Book Your Free Consultation</h5>
 
-    <form id="enquiry-form">
+                            <form id="enquiry-form">
 
-        <!-- Name -->
-        <div class="mb-3">
-            <input type="text" 
-                   class="form-control luxury-input" 
-                   name="name"
-                   placeholder="Full Name" 
-                   required>
-        </div>
+                                <!-- Name -->
+                                <div class="mb-3">
+                                    <input type="text" class="form-control luxury-input" name="name"
+                                        placeholder="Full Name" required>
+                                </div>
 
-        <!-- Phone -->
-        <div class="mb-3">
-            <input type="tel" 
-                   class="form-control luxury-input" 
-                   name="phone"
-                   placeholder="Phone Number" 
-                   required>
-        </div>
+                                <!-- Phone -->
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control luxury-input" name="phone"
+                                        placeholder="Phone Number" required>
+                                </div>
 
-        <!-- Branch Selection -->
-        <div class="mb-3">
-            <select class="form-control luxury-input" name="branch" required>
-                <option value="" disabled selected>Select Preferred Branch</option>
-                <option value="Model Town">Model Town</option>
-                <option value="Noida Sec 104">Noida Sec 104</option>
-            </select>
-        </div>
+                                <!-- Branch Selection -->
+                                <div class="mb-3">
+                                    <select class="form-control luxury-input" name="branch" required>
+                                        <option value="" disabled selected>Select Preferred Branch</option>
+                                        <option value="Model Town">Model Town</option>
+                                        <option value="Noida Sec 104">Noida Sec 104</option>
+                                    </select>
+                                </div>
 
-        <!-- Laser Area Selection -->
-        <div class="mb-3">
-            <select class="form-control luxury-input" name="treatment_area" required>
-                <option value="" disabled selected>Select Treatment Area</option>
-                <option value="Full Body">Full Body</option>
-                <option value="Face">Face</option>
-                <option value="Under Arms">Under Arms</option>
-                <option value="Back/Chest">Back/Chest</option>
-                <option value="Hands">Hands</option>
-                <option value="Legs">Legs</option>
-                <option value="Bikini Area">Bikini Area</option>
-            </select>
-        </div>
+                                <!-- Laser Area Selection -->
+                                <div class="mb-3">
+                                    <select class="form-control luxury-input" name="treatment_area" required>
+                                        <option value="" disabled selected>Select Treatment Area</option>
+                                        <option value="Full Body">Full Body</option>
+                                        <option value="Face">Face</option>
+                                        <option value="Under Arms">Under Arms</option>
+                                        <option value="Back/Chest">Back/Chest</option>
+                                        <option value="Hands">Hands</option>
+                                        <option value="Legs">Legs</option>
+                                        <option value="Bikini Area">Bikini Area</option>
+                                    </select>
+                                </div>
 
-        <!-- Message -->
-        <div class="mb-3">
-            <textarea class="form-control luxury-input"
-                      name="message"
-                      rows="3"
-                      placeholder="Your Concern (Optional)"></textarea>
-        </div>
+                                <!-- Message -->
+                                <div class="mb-3">
+                                    <textarea class="form-control luxury-input" name="message" rows="3"
+                                        placeholder="Your Concern (Optional)"></textarea>
+                                </div>
 
-        <!-- Submit Button -->
-        <button type="submit" class="btn hero-main-btn w-100">
-            Get Consultation Call
-        </button>
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn hero-main-btn w-100">
+                                    Get Consultation Call
+                                </button>
 
-    </form>
+                            </form>
 
-</div>
+                        </div>
 
                     </div>
 
@@ -468,9 +424,17 @@
             /* ================= HERO SECTION ================= */
 
             .lp-hero {
-                background: linear-gradient(135deg, #f9f6ff, #f1ecff);
+                background: linear-gradient(135deg, #2b1c15, #3a261d, #4a2f24);
                 padding-bottom: 100px;
                 position: relative;
+            }
+
+            .lp-hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 60%);
+                pointer-events: none;
             }
 
             /* ================= TOP SECTION ================= */
@@ -540,7 +504,7 @@
                 /* BIG TEXT */
                 font-weight: 800;
                 /* Bold */
-                color: #6f42c1;
+                color: #2b1c15, #3a261d, #4a2f24;
                 margin-top: 4px;
             }
 
@@ -549,6 +513,11 @@
             .hero-content-wrapper {
                 margin-top: 40px;
             }
+
+
+
+
+
 
             .hero-tag {
                 text-transform: uppercase;
@@ -561,7 +530,7 @@
             .hero-title {
                 font-size: 42px;
                 font-weight: 700;
-                color: #2d1b4e;
+                color: #ffffff;
                 margin-top: 15px;
             }
 
@@ -572,21 +541,21 @@
             }
 
             .hero-offer span {
-                color: #6f42c1;
+                color: #ffe5cc;
                 font-size: 34px;
                 font-weight: 800;
             }
 
             .hero-subtitle {
                 margin-top: 15px;
-                color: #6d647f;
+                color: #e6e0dc;
                 font-size: 16px;
             }
 
             /* ================= BUTTON ================= */
 
             .hero-main-btn {
-                background: linear-gradient(135deg, #6f42c1, #8e5cf0);
+                background: linear-gradient(135deg, #2b1c15, #3a261d, #4a2f24);
                 border: none;
                 padding: 12px 28px;
                 border-radius: 50px;
@@ -594,46 +563,46 @@
                 color: #fff;
                 margin-top: 20px;
             }
-
+            
             /* ================= FORM ================= */
 
             .form-title {
-    font-weight: 700;
-    font-size: 20px;
-    color: #2d1b4e;
-    margin-bottom: 20px;
-}
+                font-weight: 700;
+                font-size: 20px;
+                color: #2d1b4e;
+                margin-bottom: 20px;
+            }
 
-.luxury-input {
-    border-radius: 14px;
-    padding: 14px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    transition: 0.3s ease;
-}
+            .luxury-input {
+                border-radius: 14px;
+                padding: 14px;
+                border: 1px solid #ddd;
+                font-size: 15px;
+                transition: 0.3s ease;
+            }
 
-.luxury-input:focus {
-    border-color: #6f42c1;
-    box-shadow: 0 0 0 0.15rem rgba(111,66,193,0.15);
-}
+            .luxury-input:focus {
+                border-color: #fbff86;
+                box-shadow: 0 0 0 0.15rem rgba(111, 66, 193, 0.15);
+            }
 
-select.luxury-input {
-    cursor: pointer;
-}
+            select.luxury-input {
+                cursor: pointer;
+            }
 
-.hero-form-card {
-    background: #ffffff;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 30px 70px rgba(0,0,0,0.08);
-}
+            .hero-form-card {
+                background: #ffffff;
+                padding: 35px;
+                border-radius: 20px;
+                box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08);
+            }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-    .hero-form-card {
-        padding: 25px;
-    }
-}
+            /* Mobile Optimization */
+            @media (max-width: 768px) {
+                .hero-form-card {
+                    padding: 25px;
+                }
+            }
 
             /* ================= MOBILE ================= */
 
@@ -664,7 +633,7 @@ select.luxury-input {
                 }
             }
         </style>
-        </style>
+        
 
 
 
@@ -869,11 +838,14 @@ select.luxury-input {
 
                             <div class="lux-divider"></div>
 
-                            <h4 class="lux-machine-title">ADSS Diode Machine</h4>
-                            <p class="lux-text">
-                                High-speed diode laser technology for virtually painless and permanent
-                                hair reduction suitable for all skin types.
-                            </p>
+                          <h4 class="lux-machine-title">ADSS 808nm Diode Laser</h4>
+
+<p class="lux-text">
+    A clinical-grade 808nm diode laser system designed for permanent hair
+    reduction. It precisely targets melanin in the hair follicle while the
+    integrated sapphire cooling ensures maximum comfort and skin safety.
+</p>
+
 
                         </div>
                     </div>
@@ -888,11 +860,14 @@ select.luxury-input {
 
                             <div class="lux-divider"></div>
 
-                            <h4 class="lux-machine-title">Alma Soprano</h4>
-                            <p class="lux-text">
-                                Fractional RF microneedling technology that remodels collagen
-                                and tightens skin from deep within.
-                            </p>
+                            <h4 class="lux-machine-title">Alma Soprano ICE Platinum</h4>
+
+<p class="lux-text">
+    An advanced laser hair removal platform combining multiple wavelengths
+    for safe, effective treatment across all skin types. Its ICE™ cooling
+    technology delivers virtually painless sessions with superior results.
+</p>
+
 
                         </div>
                     </div>
@@ -999,39 +974,64 @@ select.luxury-input {
 
                 <!-- Heading -->
                 <div class="text-center mb-5">
-                    <h2 class="lux-why-title">Why Choose Zanishaa Aesthetics</h2>
+                    <h2 class="lux-why-title">
+                        Why Choose <span>Zanishaa Aesthetics</span>
+                    </h2>
                     <div class="lux-line"></div>
                     <p class="lux-why-subtitle">
                         Excellence in aesthetics backed by experience, precision and trust.
                     </p>
                 </div>
 
-                <!-- Stats Row -->
                 <div class="row justify-content-center text-center">
 
-                    <div class="col-lg-3 col-md-6 col-6 mb-4">
-                        <div class="lux-stat-item">
+                    <!-- Experience -->
+                   <div class="col-lg-3 col-md-6 col-12 mb-4">
+
+                        <div class="lux-stat-card">
+                            <div class="lux-icon-wrap">
+    <img src="assets/img/icons/1.svg" alt="Years of Expertise" class="lux-svg">
+</div>
+
                             <h3 class="lux-stat-number">15+</h3>
                             <p class="lux-stat-text">Years of Expertise</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-6 mb-4">
-                        <div class="lux-stat-item">
+                    <!-- Clients -->
+                   <div class="col-lg-3 col-md-6 col-12 mb-4">
+
+                        <div class="lux-stat-card">
+                            <div class="lux-icon-wrap">
+    <img src="assets/img/icons/2.svg" alt="Years of Expertise" class="lux-svg">
+</div>
+
                             <h3 class="lux-stat-number">30K+</h3>
                             <p class="lux-stat-text">Happy Clients</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-6 mb-4">
-                        <div class="lux-stat-item">
+                    <!-- Results -->
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+
+                        <div class="lux-stat-card">
+                           <div class="lux-icon-wrap">
+    <img src="assets/img/icons/3.svg" alt="Years of Expertise" class="lux-svg">
+</div>
+
                             <h3 class="lux-stat-number">99.6%</h3>
                             <p class="lux-stat-text">Positive Results</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-6 mb-4">
-                        <div class="lux-stat-item">
+                    <!-- Equipment -->
+                   <div class="col-lg-3 col-md-6 col-12 mb-4">
+
+                        <div class="lux-stat-card">
+                            <div class="lux-icon-wrap">
+    <img src="assets/img/icons/4.svg" alt="Years of Expertise" class="lux-svg">
+</div>
+
                             <h3 class="lux-stat-number">US-FDA</h3>
                             <p class="lux-stat-text">Approved Equipment</p>
                         </div>
@@ -1041,69 +1041,114 @@ select.luxury-input {
 
             </div>
         </section>
+
+
+
         <style>
-            .lux-why {
-                background: #f9f8fc;
-            }
+            /* ================= SECTION ================= */
+.lux-why {
+    background: #f6f4fb;
+    padding: 80px 0;
+}
 
-            /* Title */
-            .lux-why-title {
-                font-size: 38px;
-                font-weight: 600;
-                color: #b89b5e;
-                letter-spacing: 1px;
-            }
+/* ================= TITLE ================= */
+.lux-why-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #b89b5e;
+    letter-spacing: 1px;
+}
 
-            /* Gold Divider */
-            .lux-line {
-                width: 80px;
-                height: 2px;
-                background: linear-gradient(to right, #c9a95f, #e7c77a);
-                margin: 20px auto;
-            }
+.lux-line {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(to right, #c9a95f, #e7c77a);
+    margin: 20px auto;
+}
 
-            /* Subtitle */
-            .lux-why-subtitle {
-                color: #7d748f;
-                font-size: 16px;
-            }
+.lux-why-subtitle {
+    color: #7d748f;
+    font-size: 16px;
+}
 
-            /* Stat Item */
-            .lux-stat-item {
-                padding: 20px 10px;
-                transition: all 0.3s ease;
-            }
+/* ================= CARD ================= */
+/* ================= TRANSPARENT CARD ================= */
+.lux-stat-card {
+    background: rgba(255, 255, 255, 0.65);  /* slightly transparent */
+    backdrop-filter: blur(8px);             /* soft glass effect */
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
 
-            /* Number */
-            .lux-stat-number {
-                font-size: 42px;
-                font-weight: 600;
-                color: #2d1b4e;
-                margin-bottom: 10px;
-            }
+.lux-stat-card:hover {
+    background: rgba(255, 255, 255, 0.8);   /* slightly stronger on hover */
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+}
 
-            /* Text */
-            .lux-stat-text {
-                font-size: 15px;
-                color: #6d647f;
-                letter-spacing: 0.5px;
-            }
 
-            /* Hover subtle upscale */
-            .lux-stat-item:hover .lux-stat-number {
-                color: #c9a95f;
-            }
+/* ================= ICON CIRCLE ================= */
+.lux-icon-wrap {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+}
 
-            /* Responsive */
-            @media (max-width: 768px) {
-                .lux-why-title {
-                    font-size: 26px;
-                }
+/* 2X ICON SIZE */
+.lux-svg {
+    width: 60px;
+    height: 60px;
+}
 
-                .lux-stat-number {
-                    font-size: 30px;
-                }
-            }
+/* ================= NUMBER ================= */
+.lux-stat-number {
+    font-size: 38px;
+    font-weight: 600;
+    color: #2d1b4e;
+    margin-bottom: 6px;
+}
+
+.lux-stat-text {
+    font-size: 15px;
+    color: #6d647f;
+    margin-bottom: 0;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+    /* FORCE ONE CARD PER ROW */
+    .lux-why .col-lg-3,
+    .lux-why .col-md-6,
+    .lux-why .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .lux-icon-wrap {
+        width: 100px;
+        height: 100px;
+    }
+
+    .lux-svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .lux-stat-number {
+        font-size: 28px;
+    }
+}
+
         </style>
 
 
@@ -1455,11 +1500,11 @@ select.luxury-input {
 
 
                 </div>
-
+<br>
 
                 <!-- View All Button -->
                 <div class="text-center mt-4">
-                    <a href="https://g.page/r/YOUR-GOOGLE-REVIEW-LINK" target="_blank"
+                    <a href="https://share.google/ImzhDiMK8YoiBGvhz" target="_blank"
                         style="background:#5a3825; color:#fff; padding:12px 30px; border-radius:6px; text-decoration:none;">
                         VIEW ALL REVIEWS ↗
                     </a>
@@ -1469,7 +1514,182 @@ select.luxury-input {
         </section>
 
 
+        <br>
 
+        <section class="premium-gallery py-100">
+            <div class="container">
+
+                <div class="section-title text-center mb-5">
+                    <span class="gallery-tag">Inside Zanishaa Aesthetics</span>
+                    <h2 class=" section-title">Our Clinic Gallery</h2>
+                </div>
+
+
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/1.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/2.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/3.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/4.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/5.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/6.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 7 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/7.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 8 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/8.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 9 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/9.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 10 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/10.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 11 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/11.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- CARD 12 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-card">
+                            <img src="assets/img/gallery/12.jpeg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <style>
+            /* ================= PREMIUM GALLERY ================= */
+
+
+
+            .gallery-tag {
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: 13px;
+                color: #b89b5e;
+                font-weight: 600;
+            }
+
+            .gallery-title {
+                font-size: 36px;
+                font-weight: 700;
+                color: #b89b5e;
+                /* Luxury Gold */
+                margin-top: 10px;
+            }
+
+
+            .gallery-card {
+                position: relative;
+                overflow: hidden;
+                border-radius: 18px;
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+                transition: 0.4s ease;
+            }
+
+            .gallery-card img {
+                width: 100%;
+                height: 280px;
+                object-fit: cover;
+                transition: 0.6s ease;
+            }
+
+            .gallery-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+            }
+
+            .gallery-card:hover img {
+                transform: scale(1.08);
+            }
+
+            /* Overlay Luxury Effect */
+            .gallery-card::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent 60%);
+                opacity: 0;
+                transition: 0.4s ease;
+            }
+
+            .gallery-card:hover::after {
+                opacity: 1;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+
+                .gallery-title {
+                    font-size: 24px;
+                }
+
+                .gallery-card img {
+                    height: 220px;
+                }
+            }
+        </style>
 
 
 
@@ -1670,7 +1890,80 @@ select.luxury-input {
         </section>
 
 
+<style>
+    /* ================= FAQ CLEAN FIX ================= */
 
+.faq-wrap {
+    padding-bottom: 60px;
+}
+
+/* Accordion Item */
+.faq-wrap .accordion-item {
+    border: none;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* Accordion Button */
+.faq-wrap .accordion-button {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 18px;
+    line-height: 1.5;
+    background: #ffffff;
+    color: #1d1d1d;
+    box-shadow: none;
+}
+
+/* Remove weird blue focus */
+.faq-wrap .accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Remove default Bootstrap arrow */
+.faq-wrap .accordion-button::after {
+    display: none;
+}
+
+/* Fix PLUS alignment */
+.faq-wrap .accordion-button span {
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* Accordion Body */
+.faq-wrap .accordion-body {
+    padding: 14px 18px 18px;
+    background: #faf9fd;
+}
+
+/* Fix text spacing */
+.faq-wrap .accordion-body p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #555;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+    .faq-wrap .accordion-button {
+        font-size: 12px;
+        padding: 14px 16px;
+    }
+
+    .faq-wrap .accordion-body p {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+
+}
+
+</style>
 
         <section id="contact" class="contact-wrap pb-100">
             <div class="container">
@@ -1756,7 +2049,7 @@ select.luxury-input {
 
 
 
-        <footer class="footer-wrap" style="background-color:#5a3825; color:#fff;">
+        <footer class="footer-wrap">
             <div class="footer-top">
                 <div class="container">
                     <div class="row pt-100 pb-75">
@@ -1833,7 +2126,7 @@ select.luxury-input {
                                     }
 
                                     .social-profile li a:hover {
-                                        background: #f7345e;
+                                        background: #24050b;
                                         color: #fff;
                                     }
                                 </style>
@@ -1855,16 +2148,16 @@ select.luxury-input {
                                             info@zanishaaaesthetics.com
                                         </a>
                                     </li>
-                                    <li>
+                                    <li >
                                         <i class="ri-phone-line"></i>
                                         <a href="tel:09711555864">097115 55864</a>
                                     </li>
-                                    <li>
+                                    <li style="color: white;"    >
                                         <i class="ri-map-pin-line"></i>
                                         2nd Floor, F-14/15, Above Burger King,<br>
                                         Model Town Phase 2, New Delhi - 110033
                                     </li>
-                                    <li class="mt-2">
+                                    <li class="mt-2" style="color: white;">
                                         <i class="ri-map-pin-line"></i>
                                         HA-116, Ground Floor, Hazipur,<br>
                                         Sector 104, Noida, Uttar Pradesh - 201301
