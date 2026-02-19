@@ -120,500 +120,264 @@
 
 
 
-    <style>
-        /* ================= HERO MOBILE VIDEO ================= */
 
-        .hero-mobile-video {
-            margin: 25px 0 10px;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            /* 16:9 */
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Hide on desktop */
-        @media (min-width: 992px) {
-            .hero-mobile-video {
-                display: none;
-            }
-        }
-
-        /* ================= HERO VIDEO SLIDER ================= */
-
-        .hero-video-slider {
-            max-width: 900px;
-            margin: 40px auto;
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-        }
-
-        .video-wrapper video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Premium Controls */
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 50%;
-            padding: 18px;
-        }
-
-        .carousel-indicators [data-bs-target] {
-            background-color: #d4af37;
-        }
-    </style>
 
 
 
     <div class="page-wrapper">
 
 
-<style>
-    /* ================= HERO TOP BASE ================= */
+        <!-- <style>
+            .video-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
 
-.hero-top-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+                /* 16:9 aspect ratio (height: 9/16 * width) */
+                overflow: hidden;
+            }
 
-/* Logo Size */
-.hero-logo img {
-    height: 55px;
-}
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
 
-/* Button Style */
-.get-quote-btn {
-    background: transparent;
-    color: #ffffff; /* Same gold as logo */
-    border: 2px solid #ffffff;
-    padding: 10px 22px;
-    border-radius: 6px; /* Square look */
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-/* Hover Effect */
-.get-quote-btn:hover {
-    background: #ffffff;
-    color: #2b1a12; /* Dark chocolate text */
-    box-shadow: 0 8px 25px rgba(212,175,55,0.4);
-}
-
-/* ================= DESKTOP ================= */
-@media (min-width: 769px) {
-    .hero-mobile-cta {
-        display: none;
-    }
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-    .hero-top-inner {
-        padding: 12px 0;
-    }
-
-    .hero-logo img {
-        height: 100px;
-        width: 125px;
-    }
-
-}
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+            }
 
 
-</style>
+            @media (max-width: 767px) {
+                .video-container {
+                    display: block;
+                    /* Show the video container on mobile */
+                }
+            }
+
+            @media (min-width: 768px) {
+                .video-container {
+                    display: none;
+                    /* Hide the video container on desktop */
+                }
+            }
+        </style> -->
         <section class="lp-hero">
 
+
+
             <!-- TOP BAR INSIDE HERO -->
-        <div class="hero-top">
-    <div class="container">
-        <div class="hero-top-inner">
+            <div class="hero-top">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between">
 
-            <!-- LEFT LOGO -->
-            <div class="hero-logo">
-                <img src="assets/img/logo.png" alt="Zanishaa Aesthetics">
-            </div>
+                        <!-- Logo -->
+                        <div class="hero-logo">
+                            <img src="assets/img/logo.png" alt="Zanishaa Aesthetics">
+                        </div>
 
-            <!-- RIGHT BUTTON -->
-            <div class="hero-mobile-cta">
-                <a href="#enquiry-form" class="get-quote-btn">
-                    Get Quote
-                </a>
-            </div>
+                        <!-- Right CTA -->
+                        <div class="hero-top-right">
+                            <a href="tel:9711555864" class="hero-phone" style="color: #f3ece8;">
+                                📞 9711555864
+                            </a>
 
-        </div>
-    </div>
-</div>
+                            <a href="#enquiry-form" class="hero-top-cta" style="color: #f3ece8;">
+                                Book Free Consultation
+                            </a>
+                        </div>
 
-
-
-
-           <section class="hero-video-section">
-
-    <div id="heroVideoCarousel" class="carousel slide"
-         data-bs-ride="carousel"
-         data-bs-interval="4000">
-
-        <!-- Indicators (Optional dots) -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroVideoCarousel"
-                data-bs-slide-to="0" class="active"></button>
-
-            <button type="button" data-bs-target="#heroVideoCarousel"
-                data-bs-slide-to="1"></button>
-        </div>
-
-        <div class="carousel-inner">
-
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="video-wrapper">
-                    <video autoplay muted loop playsinline>
-                        <source src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
-                            type="video/mp4">
-                    </video>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="video-wrapper">
-                    <video autoplay muted loop playsinline>
-                        <source src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
-                            type="video/mp4">
-                    </video>
-                </div>
-            </div>
 
-        </div>
-
+            <!-- FULL WIDTH PROMOTIONAL BANNER -->
+<section class="promo-banner">
+    <div class="container-fluid p-0">
+        <img src="assets/img/banner.jpeg" alt="Soprano ICE Banner" class="img-fluid w-100">
     </div>
-
 </section>
 
+            <!-- MAIN HERO CONTENT -->
+         <section class="consultation-section">
+    <div class="container">
+        <div class="consultation-card">
+
+            <h2 class="consultation-title">Book A Consultation</h2>
+
+            <form id="enquiry-form">
+                <div class="row g-3 align-items-end">
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control luxury-input"
+                            name="name" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control luxury-input"
+                            name="phone" placeholder="Enter 10 Digit Phone Number" required>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">Treatment Options</label>
+                        <select class="form-control luxury-input"
+                            name="treatment_area" required>
+                            <option value="" disabled selected>Select Concern</option>
+                            <option value="Full Body">Full Body</option>
+                            <option value="Face">Face</option>
+                            <option value="Under Arms">Under Arms</option>
+                            <option value="Back/Chest">Back/Chest</option>
+                            <option value="Legs">Legs</option>
+                            <option value="Bikini Area">Bikini Area</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">Locations</label>
+                        <select class="form-control luxury-input"
+                            name="branch" required>
+                            <option value="" disabled selected>Select Location</option>
+                            <option value="Model Town">Model Town</option>
+                            <option value="Noida Sec 104">Noida Sec 104</option>
+                        </select>
+                    </div>
+
+                   <div class="col-12 text-center mt-4">
+                        <button type="submit" class="btn consultation-btn">
+                            Book A Consultation
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
 <style>
-    /* ================= HERO VIDEO SECTION ================= */
+    /* ================= PREMIUM BACKGROUND ================= */
 
-.hero-video-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
+.consultation-section {
+    padding: 120px 0;
+    background: radial-gradient(circle at 20% 20%, rgba(212,175,55,0.15), transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(212,175,55,0.12), transparent 40%),
+                linear-gradient(135deg, #1a120c, #2b1a10, #3b240f);
 }
 
-/* REMOVE Bootstrap container limitation */
-.hero-video-section .container,
-.hero-video-section .carousel {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
+/* ================= PREMIUM CARD ================= */
+
+.consultation-card {
+   
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow:
+        0 40px 100px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212,175,55,0.2);
 }
 
-/* Proper Banner Height */
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    height: 90vh; /* Premium full hero */
-    overflow: hidden;
-    border-radius: 0 !important; /* Remove curves */
+/* ================= TITLE ================= */
+
+.consultation-title {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #d4af37, #f7d77e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Remove any curve from carousel items */
-.carousel-item {
-    border-radius: 0 !important;
+/* ================= INPUTS ================= */
+
+.luxury-input {
+    border-radius: 50px;
+    padding: 16px 20px;
+    font-size: 14px;
+    border: none;
+    background: #e9e9e9;
 }
 
-/* Video Perfect Fit */
-.video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0 !important; /* Remove curves */
+.form-label {
+    color: #f0f0f0;
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
-/* Premium dark overlay */
-.video-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.65),
-        rgba(0, 0, 0, 0.25)
-    );
+/* ================= BUTTON ================= */
+
+.consultation-btn {
+    background: linear-gradient(90deg, #b89b5e, #d4af37);
+    border: none;
+    padding: 16px 45px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(212,175,55,0.3);
 }
 
-/* Controls Styling */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 50%;
-    padding: 22px;
+.consultation-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(212,175,55,0.5);
 }
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 992px) {
-    .video-wrapper {
-        height: 60vh;
-    }
-}
+@media (max-width: 991px) {
 
-@media (max-width: 576px) {
-    .video-wrapper {
-        height: 50vh;
+    .consultation-section {
+        padding: 80px 0;
     }
+
+    .consultation-card {
+        padding: 35px;
+    }
+
+    .consultation-title {
+        font-size: 26px;
+    }
+
 }
 
 </style>
-
-            <!-- MAIN HERO CONTENT -->
-            <div class="container hero-content-wrapper">
-
-                <!-- HERO VIDEO CAROUSEL -->
-                
-                <div class="row align-items-center gy-5">
-
-
-
-
-                    <!-- LEFT SIDE -->
-
-
-                    <div class="col-lg-6 hero-left-content">
-
-
-
-
-
-                        <span class="hero-tag">US-FDA Approved Laser Technology</span>
-
-                        <h1 class="hero-title">
-                            Smooth. Confident. Hair-Free Skin.
-                        </h1>
-
-                        <p class="hero-subtitle">
-                            Experience dermatologist-supervised laser hair removal using advanced diode technology
-                            designed for safe, effective and long-lasting hair reduction.
-                        </p>
-
-                        <!-- BENEFITS -->
-                        <div class="hero-benefits">
-
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <div class="benefit-text">Suitable for All Skin Types</div>
-                            </div>
-
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <div class="benefit-text">Advanced Diode Laser Technology</div>
-                            </div>
-
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <div class="benefit-text">Minimal Discomfort & Downtime</div>
-                            </div>
-
-                            <div class="benefit-item">
-                                <div class="benefit-icon">✓</div>
-                                <div class="benefit-text">Visible Hair Reduction from Early Sessions</div>
-                            </div>
-
-                        </div>
-                        <style>
-                            .hero-benefits {
-                                margin-top: 30px;
-                            }
-
-                            /* Each Benefit Row */
-                            .benefit-item {
-                                display: flex;
-                                align-items: center;
-                                gap: 16px;
-                                margin-bottom: 16px;
-                            }
-
-                            /* GOLD ICON CIRCLE */
-                            .benefit-icon {
-                                width: 34px;
-                                height: 34px;
-                                background: linear-gradient(135deg, #b89b5e, #d4af37);
-                                color: #1f1410;
-                                border-radius: 50%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                font-weight: 700;
-                                font-size: 14px;
-                                flex-shrink: 0;
-                                box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
-                                transition: 0.3s ease;
-                            }
-
-                            /* Slight premium hover */
-                            .benefit-item:hover .benefit-icon {
-                                transform: scale(1.08);
-                            }
-
-                            /* Text */
-                            .benefit-text {
-                                font-size: 16px;
-                                font-weight: 500;
-                                color: #f3ece8;
-                                /* Light beige for dark background */
-                                letter-spacing: 0.3px;
-                            }
-
-                            /* ================= MOBILE ================= */
-
-                            @media (max-width:768px) {
-
-                                .benefit-text {
-                                    font-size: 14px;
-                                }
-
-                                .benefit-icon {
-                                    width: 28px;
-                                    height: 28px;
-                                    font-size: 12px;
-                                }
-
-                            }
-                        </style>
-
-                        <!-- STRONG CTA LINE -->
-                        <div class="hero-cta-line" style="color: #f3ece8;">
-                            Book Your Free Consultation & Get a Personalized Treatment Plan
-                        </div>
-
-                        <!-- GOOGLE RATING BADGE -->
-                        <div class="google-rating-badge mt-4">
-
-                            <div class="rating-left">
-                                <img src="assets/img/google.png" alt="Google Rating">
-                            </div>
-
-                            <div class="rating-right">
-                                <div class="rating-top">
-                                    <strong>5.0</strong>
-                                    <span class="stars">★★★★★</span>
-                                </div>
-                                <div class="rating-bottom">
-                                    110+ Verified Google Reviews
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-
-                    </div>
-
-                    <!-- RIGHT SIDE FORM -->
-                    <div class="col-lg-6">
-                        <div class="hero-form-card">
-
-                            <h5 class="form-title">Book Your Free Consultation</h5>
-
-                            <form id="enquiry-form">
-
-                                <!-- Name -->
-                                <div class="mb-3">
-                                    <input type="text" class="form-control luxury-input" name="name"
-                                        placeholder="Full Name" required>
-                                </div>
-
-                                <!-- Phone -->
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control luxury-input" name="phone"
-                                        placeholder="Phone Number" required>
-                                </div>
-
-                                <!-- Branch Selection -->
-                                <div class="mb-3">
-                                    <select class="form-control luxury-input" name="branch" required>
-                                        <option value="" disabled selected>Select Preferred Branch</option>
-                                        <option value="Model Town">Model Town</option>
-                                        <option value="Noida Sec 104">Noida Sec 104</option>
-                                    </select>
-                                </div>
-
-                                <!-- Laser Area Selection -->
-                                <div class="mb-3">
-                                    <select class="form-control luxury-input" name="treatment_area" required>
-                                        <option value="" disabled selected>Select Treatment Area</option>
-                                        <option value="Full Body">Full Body</option>
-                                        <option value="Face">Face</option>
-                                        <option value="Under Arms">Under Arms</option>
-                                        <option value="Back/Chest">Back/Chest</option>
-                                        <option value="Hands">Hands</option>
-                                        <option value="Legs">Legs</option>
-                                        <option value="Bikini Area">Bikini Area</option>
-                                    </select>
-                                </div>
-
-                                <!-- Message -->
-                                <div class="mb-3">
-                                    <textarea class="form-control luxury-input" name="message" rows="3"
-                                        placeholder="Your Concern (Optional)"></textarea>
-                                </div>
-
-                                <!-- Submit Button -->
-                                <button type="submit" class="btn hero-main-btn w-100">
-                                    Get Consultation Call
-                                </button>
-
-                            </form>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
 
         </section>
 
-      
+        <style>
+            /* ===== MOBILE HEADER FIX ===== */
+            @media (max-width: 768px) {
+
+                /* Hide phone + consultation button */
+                .hero-top-right {
+                    display: none !important;
+                }
+
+                /* Center logo */
+                .hero-top .d-flex {
+                    justify-content: center !important;
+                }
+
+                .hero-logo {
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .hero-logo img {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        </style>
         <style>
             /* ================= HERO SECTION ================= */
 
@@ -869,16 +633,12 @@
                         </div>
                     </div>
                 </div>
-               <div class="gallery-item-wrap style7">
+                <!-- <div class="gallery-item-wrap style7">
                     <div class="gallery-card style5">
-                        <img src="assets/img/result/Aft-Bef-LHR-1.png" alt="Image">
+                        <img src="assets/img/gallery/laser-1.png" alt="Image">
 
                     </div>
                     <div class="gallery-card style5">
-                        <img src="assets/img/result/Aft-Bef-LHR-2.png" alt="Image">
-
-                    </div>
-                    <!-- < <div class="gallery-card style5">
                         <img src="assets/img/gallery/laser-2.png" alt="Image">
 
                     </div>
@@ -947,16 +707,11 @@
                             <h3><a href="service-details.html">Laser Hair Removal</a></h3>
                         </div>
                     </div>
-                    <div class="service-card style7">
-                        <img src="assets/img/service/service-12.jpg" alt="Image">
-                        <div class="service-info">
-                            <h3><a href="service-details.html">Hydra Facial</a></h3>
-                        </div>
-                    </div>
+                    
                     <div class="service-card style7">
                         <img src="assets/img/service/service-13.jpg" alt="Image">
                         <div class="service-info">
-                            <h3><a href="service-details.html">Facial Treatment</a></h3>
+                            <h3><a href="service-details.html">Hydra Facial</a></h3>
                         </div>
                     </div>
 
@@ -981,12 +736,6 @@
                         </div>
                     </div>
 
-                    <div class="service-card style7">
-                        <img style="object-fit: cover;" src="assets/img/service/service-18.png" alt="Image">
-                        <div class="service-info">
-                            <h3><a href="service-details.html">Hair Patch</a></h3>
-                        </div>
-                    </div>
 
 
                     <div class="service-card style7">
@@ -1058,7 +807,7 @@
 
                             <div class="lux-divider"></div>
 
-                            <h4 class="lux-machine-title">Alma Soprano ICE</h4>
+                            <h4 class="lux-machine-title">Alma Soprano ICE Platinum</h4>
 
                             <p class="lux-text">
                                 An advanced laser hair removal platform combining multiple wavelengths
@@ -1191,7 +940,7 @@
                                 <img src="assets/img/icons/1.svg" alt="Years of Expertise" class="lux-svg">
                             </div>
 
-                            <h3 class="lux-stat-number">10+</h3>
+                            <h3 class="lux-stat-number">15+</h3>
                             <p class="lux-stat-text">Years of Expertise</p>
                         </div>
                     </div>
@@ -1204,7 +953,7 @@
                                 <img src="assets/img/icons/2.svg" alt="Years of Expertise" class="lux-svg">
                             </div>
 
-                            <h3 class="lux-stat-number">20K+</h3>
+                            <h3 class="lux-stat-number">30K+</h3>
                             <p class="lux-stat-text">Happy Clients</p>
                         </div>
                     </div>
@@ -1725,87 +1474,87 @@
                 </div>
 
 
-              <div class="row g-4 gallery-row">
+                <div class="row g-4">
 
                     <!-- CARD 1 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/1.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 2 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/2.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 3 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/3.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 4 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/4.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 5 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/5.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 6 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/6.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 7 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/7.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 8 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/8.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 9 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/9.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 10 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/10.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 11 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/11.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 12 -->
-                    <div class="col-lg-3 col-md-6 gallery-col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/12.jpeg" alt="">
                         </div>
@@ -1820,34 +1569,6 @@
 
         <style>
             /* ================= PREMIUM GALLERY ================= */
-
-/* ================= MOBILE SCROLL GALLERY ================= */
-/* ================= MOBILE SWIPE GALLERY ================= */
-
-@media (max-width: 768px) {
-
-    .gallery-row {
-        flex-wrap: nowrap !important;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .gallery-row::-webkit-scrollbar {
-        display: none;
-    }
-
-    .gallery-col {
-        flex: 0 0 80% !important;
-        max-width: 80% !important;
-        scroll-snap-align: center;
-    }
-
-    .gallery-card img {
-        height: 240px;
-    }
-
-}
 
 
 
@@ -2328,40 +2049,15 @@
                                 <!-- Social Icons -->
                                 <div class="social-link mt-4">
                                     <ul class="social-profile list-style d-flex gap-3">
-
-                                        <li>
-                                            <a target="_blank" href="https://www.facebook.com/share/187z7KdRLS/"
-                                                style="color:#fff;">
-                                                <i class="ri-facebook-fill"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a target="_blank"
-                                                href="https://www.instagram.com/zanishaaaesthetics?igsh=MXZqNHRibXo3bDU5aw=="
-                                                style="color:#fff;">
-                                                <i class="ri-instagram-line"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a target="_blank"
-                                                href="https://youtube.com/@zanishaaaesthetics?si=d5r0-APrc2GP1TRv"
-                                                style="color:#fff;">
-                                                <i class="ri-youtube-fill"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a target="_blank"
-                                                href="https://www.linkedin.com/in/zanishaa-aesthetics-22a708392?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                                                style="color:#fff;">
-                                                <i class="ri-linkedin-fill"></i>
-                                            </a>
-                                        </li>
-
+                                        <li><a target="_blank" href="#" style="color:#fff;"><i
+                                                    class="ri-facebook-fill"></i></a></li>
+                                        <li><a target="_blank" href="#" style="color:#fff;"><i
+                                                    class="ri-instagram-line"></i></a></li>
+                                        <li><a target="_blank" href="#" style="color:#fff;"><i
+                                                    class="ri-youtube-fill"></i></a></li>
+                                        <li><a target="_blank" href="#" style="color:#fff;"><i
+                                                    class="ri-linkedin-fill"></i></a></li>
                                     </ul>
-
                                 </div>
 
                                 <style>
@@ -2572,4 +2268,4 @@
 
 </body>
 
-</html>
+</html\
