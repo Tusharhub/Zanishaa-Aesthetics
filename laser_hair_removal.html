@@ -120,75 +120,298 @@
 
 
 
-<style>
-    /* ================= HERO MOBILE VIDEO ================= */
+    <style>
+        /* ================= HERO MOBILE VIDEO ================= */
 
-.hero-mobile-video {
-    margin: 25px 0 10px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-}
+        .hero-mobile-video {
+            margin: 25px 0 10px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-}
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+        }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-/* Hide on desktop */
-@media (min-width: 992px) {
-    .hero-mobile-video {
-        display: none;
-    }
-}
+        /* Hide on desktop */
+        @media (min-width: 992px) {
+            .hero-mobile-video {
+                display: none;
+            }
+        }
 
-</style>
+        /* ================= HERO VIDEO SLIDER ================= */
+
+        .hero-video-slider {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Premium Controls */
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 18px;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #d4af37;
+        }
+    </style>
 
 
 
     <div class="page-wrapper">
 
 
-       
+<style>
+    /* ================= HERO TOP BASE ================= */
+
+.hero-top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Size */
+.hero-logo img {
+    height: 55px;
+}
+
+/* Button Style */
+.get-quote-btn {
+    background: transparent;
+    color: #ffffff; /* Same gold as logo */
+    border: 2px solid #ffffff;
+    padding: 10px 22px;
+    border-radius: 6px; /* Square look */
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.get-quote-btn:hover {
+    background: #ffffff;
+    color: #2b1a12; /* Dark chocolate text */
+    box-shadow: 0 8px 25px rgba(212,175,55,0.4);
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 769px) {
+    .hero-mobile-cta {
+        display: none;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .hero-top-inner {
+        padding: 12px 0;
+    }
+
+    .hero-logo img {
+        height: 100px;
+        width: 125px;
+    }
+
+}
+
+
+</style>
         <section class="lp-hero">
 
             <!-- TOP BAR INSIDE HERO -->
-            <div class="hero-top">
-                <div class="container">
-                    <div class="d-flex align-items-center justify-content-between">
+        <div class="hero-top">
+    <div class="container">
+        <div class="hero-top-inner">
 
-                        <!-- Logo -->
-                        <div class="hero-logo">
-                            <img src="assets/img/logo.png" alt="Zanishaa Aesthetics">
-                        </div>
+            <!-- LEFT LOGO -->
+            <div class="hero-logo">
+                <img src="assets/img/logo.png" alt="Zanishaa Aesthetics">
+            </div>
 
-                        <!-- Right CTA -->
-                        <div class="hero-top-right">
-                            <a href="tel:9711555864" class="hero-phone" style="color: #f3ece8;">
-                                📞 9711555864
-                            </a>
+            <!-- RIGHT BUTTON -->
+            <div class="hero-mobile-cta">
+                <a href="#enquiry-form" class="get-quote-btn">
+                    Get Quote
+                </a>
+            </div>
 
-                            <a href="#enquiry-form" class="hero-top-cta" style="color: #f3ece8;">
-                                Book Free Consultation
-                            </a>
-                        </div>
+        </div>
+    </div>
+</div>
 
-                    </div>
+
+
+
+           <section class="hero-video-section">
+
+    <div id="heroVideoCarousel" class="carousel slide"
+         data-bs-ride="carousel"
+         data-bs-interval="4000">
+
+        <!-- Indicators (Optional dots) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroVideoCarousel"
+                data-bs-slide-to="0" class="active"></button>
+
+            <button type="button" data-bs-target="#heroVideoCarousel"
+                data-bs-slide-to="1"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
+                            type="video/mp4">
+                    </video>
                 </div>
             </div>
 
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+    /* ================= HERO VIDEO SECTION ================= */
+
+.hero-video-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/* REMOVE Bootstrap container limitation */
+.hero-video-section .container,
+.hero-video-section .carousel {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Proper Banner Height */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Premium full hero */
+    overflow: hidden;
+    border-radius: 0 !important; /* Remove curves */
+}
+
+/* Remove any curve from carousel items */
+.carousel-item {
+    border-radius: 0 !important;
+}
+
+/* Video Perfect Fit */
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 !important; /* Remove curves */
+}
+
+/* Premium dark overlay */
+.video-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.25)
+    );
+}
+
+/* Controls Styling */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    padding: 22px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 992px) {
+    .video-wrapper {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-wrapper {
+        height: 50vh;
+    }
+}
+
+</style>
+
             <!-- MAIN HERO CONTENT -->
             <div class="container hero-content-wrapper">
+
+                <!-- HERO VIDEO CAROUSEL -->
+                
                 <div class="row align-items-center gy-5">
+
+
+
 
                     <!-- LEFT SIDE -->
 
@@ -196,18 +419,7 @@
                     <div class="col-lg-6 hero-left-content">
 
 
-                        <!-- MOBILE VIDEO -->
-<div class="hero-mobile-video">
-    <div class="video-container">
-        <iframe
-            src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
-            title="Laser Treatment Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
+
 
 
                         <span class="hero-tag">US-FDA Approved Laser Technology</span>
@@ -401,31 +613,7 @@
 
         </section>
 
-        <style>
-            /* ===== MOBILE HEADER FIX ===== */
-            @media (max-width: 768px) {
-
-                /* Hide phone + consultation button */
-                .hero-top-right {
-                    display: none !important;
-                }
-
-                /* Center logo */
-                .hero-top .d-flex {
-                    justify-content: center !important;
-                }
-
-                .hero-logo {
-                    text-align: center;
-                    width: 100%;
-                }
-
-                .hero-logo img {
-                    margin: 0 auto;
-                    display: block;
-                }
-            }
-        </style>
+      
         <style>
             /* ================= HERO SECTION ================= */
 
@@ -569,7 +757,7 @@
                 color: #fff;
                 margin-top: 20px;
             }
-            
+
             /* ================= FORM ================= */
 
             .form-title {
@@ -639,7 +827,7 @@
                 }
             }
         </style>
-        
+
 
 
 
@@ -681,12 +869,16 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="gallery-item-wrap style7">
+               <div class="gallery-item-wrap style7">
                     <div class="gallery-card style5">
-                        <img src="assets/img/gallery/laser-1.png" alt="Image">
+                        <img src="assets/img/result/Aft-Bef-LHR-1.png" alt="Image">
 
                     </div>
                     <div class="gallery-card style5">
+                        <img src="assets/img/result/Aft-Bef-LHR-2.png" alt="Image">
+
+                    </div>
+                    <!-- < <div class="gallery-card style5">
                         <img src="assets/img/gallery/laser-2.png" alt="Image">
 
                     </div>
@@ -844,13 +1036,13 @@
 
                             <div class="lux-divider"></div>
 
-                          <h4 class="lux-machine-title">ADSS 808nm Diode Laser</h4>
+                            <h4 class="lux-machine-title">ADSS 808nm Diode Laser</h4>
 
-<p class="lux-text">
-    A clinical-grade 808nm diode laser system designed for permanent hair
-    reduction. It precisely targets melanin in the hair follicle while the
-    integrated sapphire cooling ensures maximum comfort and skin safety.
-</p>
+                            <p class="lux-text">
+                                A clinical-grade 808nm diode laser system designed for permanent hair
+                                reduction. It precisely targets melanin in the hair follicle while the
+                                integrated sapphire cooling ensures maximum comfort and skin safety.
+                            </p>
 
 
                         </div>
@@ -868,11 +1060,11 @@
 
                             <h4 class="lux-machine-title">Alma Soprano ICE</h4>
 
-<p class="lux-text">
-    An advanced laser hair removal platform combining multiple wavelengths
-    for safe, effective treatment across all skin types. Its ICE™ cooling
-    technology delivers virtually painless sessions with superior results.
-</p>
+                            <p class="lux-text">
+                                An advanced laser hair removal platform combining multiple wavelengths
+                                for safe, effective treatment across all skin types. Its ICE™ cooling
+                                technology delivers virtually painless sessions with superior results.
+                            </p>
 
 
                         </div>
@@ -992,27 +1184,27 @@
                 <div class="row justify-content-center text-center">
 
                     <!-- Experience -->
-                   <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
 
                         <div class="lux-stat-card">
                             <div class="lux-icon-wrap">
-    <img src="assets/img/icons/1.svg" alt="Years of Expertise" class="lux-svg">
-</div>
+                                <img src="assets/img/icons/1.svg" alt="Years of Expertise" class="lux-svg">
+                            </div>
 
-                            <h3 class="lux-stat-number">15+</h3>
+                            <h3 class="lux-stat-number">10+</h3>
                             <p class="lux-stat-text">Years of Expertise</p>
                         </div>
                     </div>
 
                     <!-- Clients -->
-                   <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
 
                         <div class="lux-stat-card">
                             <div class="lux-icon-wrap">
-    <img src="assets/img/icons/2.svg" alt="Years of Expertise" class="lux-svg">
-</div>
+                                <img src="assets/img/icons/2.svg" alt="Years of Expertise" class="lux-svg">
+                            </div>
 
-                            <h3 class="lux-stat-number">30K+</h3>
+                            <h3 class="lux-stat-number">20K+</h3>
                             <p class="lux-stat-text">Happy Clients</p>
                         </div>
                     </div>
@@ -1021,9 +1213,9 @@
                     <div class="col-lg-3 col-md-6 col-12 mb-4">
 
                         <div class="lux-stat-card">
-                           <div class="lux-icon-wrap">
-    <img src="assets/img/icons/3.svg" alt="Years of Expertise" class="lux-svg">
-</div>
+                            <div class="lux-icon-wrap">
+                                <img src="assets/img/icons/3.svg" alt="Years of Expertise" class="lux-svg">
+                            </div>
 
                             <h3 class="lux-stat-number">99.6%</h3>
                             <p class="lux-stat-text">Positive Results</p>
@@ -1031,12 +1223,12 @@
                     </div>
 
                     <!-- Equipment -->
-                   <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
 
                         <div class="lux-stat-card">
                             <div class="lux-icon-wrap">
-    <img src="assets/img/icons/4.svg" alt="Years of Expertise" class="lux-svg">
-</div>
+                                <img src="assets/img/icons/4.svg" alt="Years of Expertise" class="lux-svg">
+                            </div>
 
                             <h3 class="lux-stat-number">US-FDA</h3>
                             <p class="lux-stat-text">Approved Equipment</p>
@@ -1052,109 +1244,111 @@
 
         <style>
             /* ================= SECTION ================= */
-.lux-why {
-    background: #f6f4fb;
-    padding: 80px 0;
-}
+            .lux-why {
+                background: #f6f4fb;
+                padding: 80px 0;
+            }
 
-/* ================= TITLE ================= */
-.lux-why-title {
-    font-size: 36px;
-    font-weight: 600;
-    color: #b89b5e;
-    letter-spacing: 1px;
-}
+            /* ================= TITLE ================= */
+            .lux-why-title {
+                font-size: 36px;
+                font-weight: 600;
+                color: #b89b5e;
+                letter-spacing: 1px;
+            }
 
-.lux-line {
-    width: 80px;
-    height: 2px;
-    background: linear-gradient(to right, #c9a95f, #e7c77a);
-    margin: 20px auto;
-}
+            .lux-line {
+                width: 80px;
+                height: 2px;
+                background: linear-gradient(to right, #c9a95f, #e7c77a);
+                margin: 20px auto;
+            }
 
-.lux-why-subtitle {
-    color: #7d748f;
-    font-size: 16px;
-}
+            .lux-why-subtitle {
+                color: #7d748f;
+                font-size: 16px;
+            }
 
-/* ================= CARD ================= */
-/* ================= TRANSPARENT CARD ================= */
-.lux-stat-card {
-    background: rgba(255, 255, 255, 0.65);  /* slightly transparent */
-    backdrop-filter: blur(8px);             /* soft glass effect */
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 20px;
-    padding: 30px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
+            /* ================= CARD ================= */
+            /* ================= TRANSPARENT CARD ================= */
+            .lux-stat-card {
+                background: rgba(255, 255, 255, 0.65);
+                /* slightly transparent */
+                backdrop-filter: blur(8px);
+                /* soft glass effect */
+                -webkit-backdrop-filter: blur(8px);
+                border-radius: 20px;
+                padding: 30px 20px;
+                border: 1px solid rgba(255, 255, 255, 0.6);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+            }
 
-.lux-stat-card:hover {
-    background: rgba(255, 255, 255, 0.8);   /* slightly stronger on hover */
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
-}
+            .lux-stat-card:hover {
+                background: rgba(255, 255, 255, 0.8);
+                /* slightly stronger on hover */
+                transform: translateY(-6px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+            }
 
 
-/* ================= ICON CIRCLE ================= */
-.lux-icon-wrap {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 18px;
-}
+            /* ================= ICON CIRCLE ================= */
+            .lux-icon-wrap {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
 
-/* 2X ICON SIZE */
-.lux-svg {
-    width: 60px;
-    height: 60px;
-}
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 18px;
+            }
 
-/* ================= NUMBER ================= */
-.lux-stat-number {
-    font-size: 38px;
-    font-weight: 600;
-    color: #2d1b4e;
-    margin-bottom: 6px;
-}
+            /* 2X ICON SIZE */
+            .lux-svg {
+                width: 60px;
+                height: 60px;
+            }
 
-.lux-stat-text {
-    font-size: 15px;
-    color: #6d647f;
-    margin-bottom: 0;
-}
+            /* ================= NUMBER ================= */
+            .lux-stat-number {
+                font-size: 38px;
+                font-weight: 600;
+                color: #2d1b4e;
+                margin-bottom: 6px;
+            }
 
-/* ================= MOBILE FIX ================= */
-@media (max-width: 768px) {
+            .lux-stat-text {
+                font-size: 15px;
+                color: #6d647f;
+                margin-bottom: 0;
+            }
 
-    /* FORCE ONE CARD PER ROW */
-    .lux-why .col-lg-3,
-    .lux-why .col-md-6,
-    .lux-why .col-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+            /* ================= MOBILE FIX ================= */
+            @media (max-width: 768px) {
 
-    .lux-icon-wrap {
-        width: 100px;
-        height: 100px;
-    }
+                /* FORCE ONE CARD PER ROW */
+                .lux-why .col-lg-3,
+                .lux-why .col-md-6,
+                .lux-why .col-6 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
 
-    .lux-svg {
-        width: 50px;
-        height: 50px;
-    }
+                .lux-icon-wrap {
+                    width: 100px;
+                    height: 100px;
+                }
 
-    .lux-stat-number {
-        font-size: 28px;
-    }
-}
+                .lux-svg {
+                    width: 50px;
+                    height: 50px;
+                }
 
+                .lux-stat-number {
+                    font-size: 28px;
+                }
+            }
         </style>
 
 
@@ -1506,7 +1700,7 @@
 
 
                 </div>
-<br>
+                <br>
 
                 <!-- View All Button -->
                 <div class="text-center mt-4">
@@ -1531,87 +1725,87 @@
                 </div>
 
 
-                <div class="row g-4">
+              <div class="row g-4 gallery-row">
 
                     <!-- CARD 1 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/1.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 2 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/2.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 3 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/3.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 4 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/4.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 5 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/5.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 6 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/6.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 7 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/7.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 8 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/8.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 9 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/9.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 10 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/10.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 11 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/11.jpeg" alt="">
                         </div>
                     </div>
 
                     <!-- CARD 12 -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 gallery-col">
                         <div class="gallery-card">
                             <img src="assets/img/gallery/12.jpeg" alt="">
                         </div>
@@ -1626,6 +1820,34 @@
 
         <style>
             /* ================= PREMIUM GALLERY ================= */
+
+/* ================= MOBILE SCROLL GALLERY ================= */
+/* ================= MOBILE SWIPE GALLERY ================= */
+
+@media (max-width: 768px) {
+
+    .gallery-row {
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery-col {
+        flex: 0 0 80% !important;
+        max-width: 80% !important;
+        scroll-snap-align: center;
+    }
+
+    .gallery-card img {
+        height: 240px;
+    }
+
+}
 
 
 
@@ -1896,80 +2118,79 @@
         </section>
 
 
-<style>
-    /* ================= FAQ CLEAN FIX ================= */
+        <style>
+            /* ================= FAQ CLEAN FIX ================= */
 
-.faq-wrap {
-    padding-bottom: 60px;
-}
+            .faq-wrap {
+                padding-bottom: 60px;
+            }
 
-/* Accordion Item */
-.faq-wrap .accordion-item {
-    border: none;
-    margin-bottom: 14px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-}
+            /* Accordion Item */
+            .faq-wrap .accordion-item {
+                border: none;
+                margin-bottom: 14px;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            }
 
-/* Accordion Button */
-.faq-wrap .accordion-button {
-    font-size: 15px;
-    font-weight: 500;
-    padding: 16px 18px;
-    line-height: 1.5;
-    background: #ffffff;
-    color: #1d1d1d;
-    box-shadow: none;
-}
+            /* Accordion Button */
+            .faq-wrap .accordion-button {
+                font-size: 15px;
+                font-weight: 500;
+                padding: 16px 18px;
+                line-height: 1.5;
+                background: #ffffff;
+                color: #1d1d1d;
+                box-shadow: none;
+            }
 
-/* Remove weird blue focus */
-.faq-wrap .accordion-button:focus {
-    box-shadow: none;
-}
+            /* Remove weird blue focus */
+            .faq-wrap .accordion-button:focus {
+                box-shadow: none;
+            }
 
-/* Remove default Bootstrap arrow */
-.faq-wrap .accordion-button::after {
-    display: none;
-}
+            /* Remove default Bootstrap arrow */
+            .faq-wrap .accordion-button::after {
+                display: none;
+            }
 
-/* Fix PLUS alignment */
-.faq-wrap .accordion-button span {
-    margin-right: 10px;
-    font-size: 14px;
-    line-height: 1;
-}
+            /* Fix PLUS alignment */
+            .faq-wrap .accordion-button span {
+                margin-right: 10px;
+                font-size: 14px;
+                line-height: 1;
+            }
 
-/* Accordion Body */
-.faq-wrap .accordion-body {
-    padding: 14px 18px 18px;
-    background: #faf9fd;
-}
+            /* Accordion Body */
+            .faq-wrap .accordion-body {
+                padding: 14px 18px 18px;
+                background: #faf9fd;
+            }
 
-/* Fix text spacing */
-.faq-wrap .accordion-body p {
-    font-size: 12px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    color: #555;
-}
+            /* Fix text spacing */
+            .faq-wrap .accordion-body p {
+                font-size: 12px;
+                line-height: 1.6;
+                margin-bottom: 0;
+                color: #555;
+            }
 
-/* MOBILE OPTIMIZATION */
-@media (max-width: 768px) {
+            /* MOBILE OPTIMIZATION */
+            @media (max-width: 768px) {
 
-    .faq-wrap .accordion-button {
-        font-size: 12px;
-        padding: 14px 16px;
-    }
+                .faq-wrap .accordion-button {
+                    font-size: 12px;
+                    padding: 14px 16px;
+                }
 
-    .faq-wrap .accordion-body p {
-        font-size: 13.5px;
-        line-height: 1.6;
-    }
+                .faq-wrap .accordion-body p {
+                    font-size: 13.5px;
+                    line-height: 1.6;
+                }
 
-}
-
-</style>
+            }
+        </style>
 
         <section id="contact" class="contact-wrap pb-100">
             <div class="container">
@@ -2107,15 +2328,40 @@
                                 <!-- Social Icons -->
                                 <div class="social-link mt-4">
                                     <ul class="social-profile list-style d-flex gap-3">
-                                        <li><a target="_blank" href="#" style="color:#fff;"><i
-                                                    class="ri-facebook-fill"></i></a></li>
-                                        <li><a target="_blank" href="#" style="color:#fff;"><i
-                                                    class="ri-instagram-line"></i></a></li>
-                                        <li><a target="_blank" href="#" style="color:#fff;"><i
-                                                    class="ri-youtube-fill"></i></a></li>
-                                        <li><a target="_blank" href="#" style="color:#fff;"><i
-                                                    class="ri-linkedin-fill"></i></a></li>
+
+                                        <li>
+                                            <a target="_blank" href="https://www.facebook.com/share/187z7KdRLS/"
+                                                style="color:#fff;">
+                                                <i class="ri-facebook-fill"></i>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a target="_blank"
+                                                href="https://www.instagram.com/zanishaaaesthetics?igsh=MXZqNHRibXo3bDU5aw=="
+                                                style="color:#fff;">
+                                                <i class="ri-instagram-line"></i>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a target="_blank"
+                                                href="https://youtube.com/@zanishaaaesthetics?si=d5r0-APrc2GP1TRv"
+                                                style="color:#fff;">
+                                                <i class="ri-youtube-fill"></i>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a target="_blank"
+                                                href="https://www.linkedin.com/in/zanishaa-aesthetics-22a708392?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                                style="color:#fff;">
+                                                <i class="ri-linkedin-fill"></i>
+                                            </a>
+                                        </li>
+
                                     </ul>
+
                                 </div>
 
                                 <style>
@@ -2154,11 +2400,11 @@
                                             info@zanishaaaesthetics.com
                                         </a>
                                     </li>
-                                    <li >
+                                    <li>
                                         <i class="ri-phone-line"></i>
                                         <a href="tel:09711555864">097115 55864</a>
                                     </li>
-                                    <li style="color: white;"    >
+                                    <li style="color: white;">
                                         <i class="ri-map-pin-line"></i>
                                         2nd Floor, F-14/15, Above Burger King,<br>
                                         Model Town Phase 2, New Delhi - 110033
