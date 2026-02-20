@@ -1073,6 +1073,158 @@
                 </div>
             </div>
         </section>
+     <style>
+.lhr-areas-section {
+  padding: 90px 0;
+  background: #f9f8fc; /* soft luxury tone */
+}
+
+.lhr-heading {
+  font-size: 34px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+/* Elegant underline */
+.lhr-heading::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(to right, #f9f8fc);
+  display: block;
+  margin: 18px auto 0;
+  border-radius: 2px;
+}
+
+.lhr-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.lhr-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  text-align: center;
+  position: relative;
+}
+
+.lhr-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.lhr-card h5 {
+  padding: 22px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* Premium hover */
+.lhr-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.lhr-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .lhr-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE – SINGLE CARD CAROUSEL ================= */
+@media (max-width: 576px) {
+
+  .lhr-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .lhr-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lhr-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+  }
+
+  .lhr-card img {
+    height: 260px;
+  }
+
+}
+</style>
+<section class="lhr-areas-section">
+  <div class="container">
+    <h2 class="lhr-heading text-center">
+      Areas in which Laser Hair Reduction can be done!
+    </h2>
+
+    <div class="lhr-grid">
+
+      <div class="lhr-card">
+        <img src="./assets/img/services/fullbody.png" alt="Full Body LHR">
+        <h5>Full Body LHR</h5>
+      </div>
+
+      <div class="lhr-card">
+        <img src="./assets/img/services/arms.png" alt="Full Arms LHR">
+        <h5>Full Arms LHR</h5>
+      </div>
+
+      <div class="lhr-card">
+        <img src="./assets/img/services/back.png" alt="Full Back LHR">
+        <h5>Full Back LHR</h5>
+      </div>
+
+      <div class="lhr-card">
+        <img src="./assets/img/services/underarms.png" alt="Underarms LHR">
+        <h5>Underarms LHR</h5>
+      </div>
+
+      <div class="lhr-card">
+        <img src="./assets/img/services/face.png" alt="Beard LHR">
+        <h5>Beard LHR</h5>
+      </div>
+
+      <div class="lhr-card">
+        <img src="./assets/img/services/chest.png" alt="Chest LHR">
+        <h5>Chest LHR</h5>
+      </div>
+
+      <div class="lhr-card">
+        <img src="./assets/img/services/legs.png" alt="Full Legs LHR">
+        <h5>Full Legs LHR</h5>
+      </div>
+       <div class="lhr-card">
+        <img src="./assets/img/services/bikini.png" alt="Full Legs LHR">
+        <h5>Bikini LHR</h5>
+      </div>
+
+    </div>
+  </div>
+</section>
         <section class="Machince_Classname py-5">
             <div class="container">
 
