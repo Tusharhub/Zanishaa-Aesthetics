@@ -196,66 +196,67 @@
     <div class="page-wrapper">
 
 
-<style>
-    /* ================= HERO TOP BASE ================= */
+        <style>
+            /* ================= HERO TOP BASE ================= */
 
-.hero-top-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+            .hero-top-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
 
-/* Logo Size */
-.hero-logo img {
-    height: 55px;
-}
+            /* Logo Size */
+            .hero-logo img {
+                height: 120px;
+            }
 
-/* Button Style */
-.get-quote-btn {
-    background: transparent;
-    color: #ffffff; /* Same gold as logo */
-    border: 2px solid #ffffff;
-    padding: 10px 22px;
-    border-radius: 6px; /* Square look */
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
+            /* Button Style */
+            .get-quote-btn {
+                background: transparent;
+                color: #ffffff;
+                /* Same gold as logo */
+                border: 2px solid #ffffff;
+                padding: 10px 22px;
+                border-radius: 6px;
+                /* Square look */
+                font-weight: 600;
+                text-decoration: none;
+                transition: 0.3s ease;
+            }
 
-/* Hover Effect */
-.get-quote-btn:hover {
-    background: #ffffff;
-    color: #2b1a12; /* Dark chocolate text */
-    box-shadow: 0 8px 25px rgba(212,175,55,0.4);
-}
+            /* Hover Effect */
+            .get-quote-btn:hover {
+                background: #ffffff;
+                color: #2b1a12;
+                /* Dark chocolate text */
+                box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            }
 
-/* ================= DESKTOP ================= */
-@media (min-width: 769px) {
-    .hero-mobile-cta {
-        display: none;
-    }
-}
+            /* ================= DESKTOP ================= */
+            @media (min-width: 769px) {
+                .hero-mobile-cta {
+                    display: none;
+                }
+            }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
+            /* ================= MOBILE ================= */
+            @media (max-width: 768px) {
 
-    .hero-top-inner {
-        padding: 12px 0;
-    }
+                .hero-top-inner {
+                    padding: 12px 0;
+                }
 
-    .hero-logo img {
-        height: 100px;
-        width: 125px;
-    }
+                .hero-logo img {
+                    height: 100px;
+                    width: 125px;
+                }
 
-}
-
-
-</style>
+            }
+        </style>
         <section class="lp-hero">
 
             <!-- TOP BAR INSIDE HERO -->
-        <div class="hero-top">
+           <div class="hero-top">
     <div class="container">
         <div class="hero-top-inner">
 
@@ -264,7 +265,15 @@
                 <img src="assets/img/logo.png" alt="Zanishaa Aesthetics">
             </div>
 
-            <!-- RIGHT BUTTON -->
+            <!-- RIGHT CONTACT (Desktop Only) -->
+            <div class="hero-contact">
+                <a href="tel:9711555864">📞 97115 55864</a>
+                <a href="mailto:info@zanishaaaesthetics.com">
+                    ✉ info@zanishaaaesthetics.com
+                </a>
+            </div>
+
+            <!-- MOBILE BUTTON -->
             <div class="hero-mobile-cta">
                 <a href="#enquiry-form" class="get-quote-btn">
                     Get Quote
@@ -278,136 +287,136 @@
 
 
 
-           <section class="hero-video-section">
 
-    <div id="heroVideoCarousel" class="carousel slide"
-         data-bs-ride="carousel"
-         data-bs-interval="4000">
+            <section class="hero-video-section">
 
-        <!-- Indicators (Optional dots) -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroVideoCarousel"
-                data-bs-slide-to="0" class="active"></button>
+                <div id="heroVideoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
 
-            <button type="button" data-bs-target="#heroVideoCarousel"
-                data-bs-slide-to="1"></button>
-        </div>
+                    <!-- Indicators (Optional dots) -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroVideoCarousel" data-bs-slide-to="0"
+                            class="active"></button>
 
-        <div class="carousel-inner">
+                        <button type="button" data-bs-target="#heroVideoCarousel" data-bs-slide-to="1"></button>
+                    </div>
 
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="video-wrapper">
-                    <video autoplay muted loop playsinline>
-                        <source src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
-                            type="video/mp4">
-                    </video>
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="video-wrapper">
+                                <video autoplay muted loop playsinline>
+                                    <source
+                                        src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="video-wrapper">
+                                <video autoplay muted loop playsinline>
+                                    <source
+                                        src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-            </div>
 
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="video-wrapper">
-                    <video autoplay muted loop playsinline>
-                        <source src="https://zanishaaaesthetics.com/wp-content/uploads/2026/01/ZANISHAA-REEL_3.mp4"
-                            type="video/mp4">
-                    </video>
-                </div>
-            </div>
+            </section>
 
-        </div>
+            <style>
+                /* ================= HERO VIDEO SECTION ================= */
 
-    </div>
+                .hero-video-section {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 0;
+                    margin: 0;
+                }
 
-</section>
+                /* REMOVE Bootstrap container limitation */
+                .hero-video-section .container,
+                .hero-video-section .carousel {
+                    max-width: 100%;
+                    padding: 0;
+                    margin: 0;
+                }
 
-<style>
-    /* ================= HERO VIDEO SECTION ================= */
+                /* Proper Banner Height */
+                .video-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 90vh;
+                    /* Premium full hero */
+                    overflow: hidden;
+                    border-radius: 0 !important;
+                    /* Remove curves */
+                }
 
-.hero-video-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-}
+                /* Remove any curve from carousel items */
+                .carousel-item {
+                    border-radius: 0 !important;
+                }
 
-/* REMOVE Bootstrap container limitation */
-.hero-video-section .container,
-.hero-video-section .carousel {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-}
+                /* Video Perfect Fit */
+                .video-wrapper video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 0 !important;
+                    /* Remove curves */
+                }
 
-/* Proper Banner Height */
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    height: 90vh; /* Premium full hero */
-    overflow: hidden;
-    border-radius: 0 !important; /* Remove curves */
-}
+                /* Premium dark overlay */
+                .video-wrapper::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to right,
+                            rgba(0, 0, 0, 0.65),
+                            rgba(0, 0, 0, 0.25));
+                }
 
-/* Remove any curve from carousel items */
-.carousel-item {
-    border-radius: 0 !important;
-}
+                /* Controls Styling */
+                .carousel-control-prev,
+                .carousel-control-next {
+                    width: 5%;
+                }
 
-/* Video Perfect Fit */
-.video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0 !important; /* Remove curves */
-}
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    background-color: rgba(0, 0, 0, 0.6);
+                    border-radius: 50%;
+                    padding: 22px;
+                }
 
-/* Premium dark overlay */
-.video-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.65),
-        rgba(0, 0, 0, 0.25)
-    );
-}
+                /* ================= MOBILE ================= */
 
-/* Controls Styling */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-}
+                @media (max-width: 992px) {
+                    .video-wrapper {
+                        height: 60vh;
+                    }
+                }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 50%;
-    padding: 22px;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 992px) {
-    .video-wrapper {
-        height: 60vh;
-    }
-}
-
-@media (max-width: 576px) {
-    .video-wrapper {
-        height: 50vh;
-    }
-}
-
-</style>
+                @media (max-width: 576px) {
+                    .video-wrapper {
+                        height: 50vh;
+                    }
+                }
+            </style>
 
             <!-- MAIN HERO CONTENT -->
             <div class="container hero-content-wrapper">
 
                 <!-- HERO VIDEO CAROUSEL -->
-                
+
                 <div class="row align-items-center gy-5">
 
 
@@ -613,7 +622,7 @@
 
         </section>
 
-      
+
         <style>
             /* ================= HERO SECTION ================= */
 
@@ -631,21 +640,81 @@
                 pointer-events: none;
             }
 
-            /* ================= TOP SECTION ================= */
+           /* ================= HERO TOP ================= */
 
-            .hero-top {
-                padding: 20px 0;
-            }
+.hero-top {
+    padding: 15px 0;
+}
 
-            .hero-logo img {
-                width: 150px;
-            }
+.hero-top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-            .hero-top-right {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-            }
+/* LOGO */
+.hero-logo img {
+    height: 90px;
+}
+
+/* CONTACT RIGHT (Desktop) */
+.hero-contact {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+
+.hero-contact a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero-contact a:hover {
+    text-decoration: underline;
+}
+
+/* GET QUOTE BUTTON */
+.get-quote-btn {
+    background: transparent;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.get-quote-btn:hover {
+    background: #d4af37;
+    color: #2b1a12;
+}
+
+/* Hide mobile button on desktop */
+.hero-mobile-cta {
+    display: none;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    /* Hide phone + email */
+    .hero-contact {
+        display: none;
+    }
+
+    /* Show mobile button */
+    .hero-mobile-cta {
+        display: block;
+    }
+
+    .hero-logo img {
+        height: 90px;
+    }
+}
+
 
             /* ================= GOOGLE RATING BADGE ================= */
 
@@ -869,7 +938,7 @@
                         </div>
                     </div>
                 </div>
-               <div class="gallery-item-wrap style7">
+                <div class="gallery-item-wrap style7">
                     <div class="gallery-card style5">
                         <img src="assets/img/result/Aft-Bef-LHR-1.png" alt="Image">
 
@@ -913,7 +982,7 @@
                     </div>
 
                 </div> -->
-            </div>
+                </div>
         </section>
 
         <section id="service" class="service-wrap pb-100">
@@ -1725,7 +1794,7 @@
                 </div>
 
 
-              <div class="row g-4 gallery-row">
+                <div class="row g-4 gallery-row">
 
                     <!-- CARD 1 -->
                     <div class="col-lg-3 col-md-6 gallery-col">
@@ -1821,33 +1890,33 @@
         <style>
             /* ================= PREMIUM GALLERY ================= */
 
-/* ================= MOBILE SCROLL GALLERY ================= */
-/* ================= MOBILE SWIPE GALLERY ================= */
+            /* ================= MOBILE SCROLL GALLERY ================= */
+            /* ================= MOBILE SWIPE GALLERY ================= */
 
-@media (max-width: 768px) {
+            @media (max-width: 768px) {
 
-    .gallery-row {
-        flex-wrap: nowrap !important;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
+                .gallery-row {
+                    flex-wrap: nowrap !important;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    -webkit-overflow-scrolling: touch;
+                }
 
-    .gallery-row::-webkit-scrollbar {
-        display: none;
-    }
+                .gallery-row::-webkit-scrollbar {
+                    display: none;
+                }
 
-    .gallery-col {
-        flex: 0 0 80% !important;
-        max-width: 80% !important;
-        scroll-snap-align: center;
-    }
+                .gallery-col {
+                    flex: 0 0 80% !important;
+                    max-width: 80% !important;
+                    scroll-snap-align: center;
+                }
 
-    .gallery-card img {
-        height: 240px;
-    }
+                .gallery-card img {
+                    height: 240px;
+                }
 
-}
+            }
 
 
 
